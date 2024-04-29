@@ -1,0 +1,51 @@
+import React, { useRef } from 'react'
+import './contact.css'
+import FacebookIcon from '../../assets/facebook-icon.png'
+import TwitterIcon from '../../assets/twitter.png'
+import InstagramIcon from '../../assets/instagram.png'
+import YoutubeIcon from '../../assets/youtube.png'
+import emailjs from '@emailjs/browser';
+
+const Contact = () => {
+  const form = useRef();
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm('service_0bpei3p', 'template_vfm3efl', form.current, {
+        publicKey: 'i0MAsq9S_Fjl5m6Am',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+          e.target.reset();
+          alert('Email Sent!!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
+  };
+  return (
+    <section id="contactPage">
+        <div id='contact'>
+            <h1 className='contactPageTitle'>Contact Me</h1>
+            <span className="contactDesc">Description of contact</span>
+            <form className='contactForm' ref={form} onSubmit={sendEmail}>
+                <input type='text' className='name' placeholder='Your Name' name='your_name' />
+                <input type='email' className='email' placeholder='Your Email' name='your_email' />
+                <textarea className='msg' name='message' rows='5' placeholder='Your Message'></textarea>
+                <button className='submitBtn' type='submit' value='Send'>Submit</button>
+                <div className="links">
+                    <img src={FacebookIcon} alt='Facebook' className='link' />
+                    <img src={TwitterIcon} alt='Twitter' className='link' />
+                    <img src={InstagramIcon} alt='Instagram' className='link' />
+                    <img src={YoutubeIcon} alt='Youtube' className='link' />
+                </div>
+            </form>
+        </div>
+    </section>
+  )
+}
+
+export default Contact
