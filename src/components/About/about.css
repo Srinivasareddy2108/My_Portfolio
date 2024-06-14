@@ -1,12 +1,12 @@
 #about {
-    overflow: hidden;
+
   width: 100vw;
-  max-width: 65rem;
-  display: flex;
+
+
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  text-align: center;
+  
   margin: 0 auto;
   }
 
@@ -15,6 +15,7 @@
     font-weight: 600;
     padding-top: 3rem;
     margin-bottom: 50px;
+    text-align: center;
 }
 
 .about__container {
@@ -32,17 +33,21 @@
 }
 
 .about__me-image {
+    margin-top: 10px;
     border-radius: 1rem;
     overflow: hidden;
     transition: transform 0.3s ease; /* Smooth transition effect */
-    display: flex;
-    justify-content: center; /* Center the image horizontally */
-    align-items: center; /* Center the image vertically */
+    
 }
 
 .about__me-image img {
-    max-width: 40%; /* Set maximum width of the image to fill its container */
-    height: auto; /* Maintain aspect ratio */
+     /* Set maximum width of the image to fill its container */
+     /* Maintain aspect ratio */
+     display: block;
+  margin-left: auto;
+  margin-right: auto;
+  
+  max-width: 60%;
 }
 
 .about__me-image:hover {

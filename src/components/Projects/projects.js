@@ -1,8 +1,8 @@
 import React from 'react'
 import './projects.css'
-import IMG1 from "../../assets/Flexcavo.png";
-import IMG2 from "../../assets/Meetnative.png";
-import IMG3 from "../../assets/Mobinspire.png";
+import IMG1 from "../../assets/Screenshot (1218).png";
+import IMG2 from "../../assets/Screenshot (1219).png";
+import IMG3 from "../../assets/agri_app.png";
 
 const Projects = () => {
   return (
@@ -27,8 +27,8 @@ const Projects = () => {
                 <p>"MERN stack doctor appointment booking app enables users to schedule appointments, view doctor availability, and manage bookings efficiently."
                 </p>
 
-                <a href="https://compound.finance/" target="_blank" className="button">Site</a>
-                <a href="https://github.com/Srinivasareddy2108/Doctor_App_MERN" target="_blank" className="button">Code</a>
+                <a href="https://github.com/Srinivasareddy2108/Doctor-App-2-" target="_blank" className="button">Site</a>
+                <a href="https://github.com/Srinivasareddy2108/Doctor-App-2-" target="_blank" className="button">Code</a>
             </div>
 
             <div className="projects__card">
@@ -37,8 +37,8 @@ const Projects = () => {
                 <p>"Spring Boot app for agriculture and entrepreneurship management facilitates resource allocation for farmers and entrepreneurs."
                 </p>
 
-                <a href="https://aave.com/" target="_blank" className="button">Site</a>
-                <a href="https://github.com/aave/aave-v3-core" target="_blank" className="button">Code</a>
+                {/* <a href="https://aave.com/" target="_blank" className="button">Site</a>
+                <a href="https://github.com/aave/aave-v3-core" target="_blank" className="button">Code</a> */}
             </div>
         </div>
     </section>
